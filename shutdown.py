@@ -5,10 +5,6 @@ import paho.mqtt.client as mqtt
 import time
 broker="192.168.0.203"
 
-auth = {
-  'username':"admin",
-  'password':"admin"
-}
 #define callback
 def on_message(client, userdata, message):
    msg=str(message.payload.decode("utf-8"))
