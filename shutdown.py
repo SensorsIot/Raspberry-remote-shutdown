@@ -30,6 +30,7 @@ client= mqtt.Client("Octoprint")
 ######
 client.on_message=on_message
 client.on_connect=on_connect
+client.username_pw_set(username=admin, password=admin)
 client.connected_flag=False
 client.connect(broker)#connect
 while True:
@@ -38,5 +39,5 @@ while True:
    if len(messages)>0:
       m=messages.pop(0)
       print("shutdown")
-      client.publish("prusa/mains/sonoff", payload=None, auth=auth, qos=0, retain=False)
+      client.publish("prusa/mains/sonoff", payload=None, qos=0, retain=False)
       os.system("sudo shutdown now")
