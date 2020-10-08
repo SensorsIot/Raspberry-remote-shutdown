@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User=pi
-ExecStart=/usr/bin/python -u /home/pi/3d-printer/shutdown.py
+ExecStart=/usr/bin/python -u /home/pi/Raspberry-remote-shutdown/shutdown.py
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
