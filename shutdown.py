@@ -30,7 +30,7 @@ client= mqtt.Client("Octoprint")
 ######
 client.on_message=on_message
 client.on_connect=on_connect
-client.username_pw_set(username=admin, password=admin)
+client.username_pw_set(username="admin", password="admin")
 client.connected_flag=False
 client.connect(broker)#connect
 while True:
