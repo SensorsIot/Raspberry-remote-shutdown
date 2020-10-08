@@ -1,0 +1,13 @@
+[Unit]
+Description=Shutdown
+After=network.target
+
+[Service]
+User=pi
+ExecStart=/usr/bin/python -u /home/pi/3d-printer/shutdown.py
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
