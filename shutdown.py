@@ -18,7 +18,7 @@ def on_message(client, userdata, message):
 def on_connect(client, userdata, flags,rc):
     if rc==0:
         client.connected_flag=True
-        client.subscribe(sub_topic, auth=auth)
+        client.subscribe(sub_topic)
     else:
         client.bad_connection_flag=True
         client.connected_flag=False
