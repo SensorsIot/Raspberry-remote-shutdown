@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "installing pip3"
 sudo apt update
 sudo apt install python-pip
